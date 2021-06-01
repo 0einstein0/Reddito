@@ -12,6 +12,10 @@ You'll need Node.js and npm on your computer.
 Then you can install Reddito:
 
 ```shell
+npm install
+```
+
+```shell
 npm install --only=prod
 ```
 
