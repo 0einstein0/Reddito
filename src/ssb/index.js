@@ -15,7 +15,7 @@ const lodash = require("lodash");
 const fs = require("fs");
 const os = require("os");
 
-const flotilla = require("./flotilla");
+const packages = require("./packages");
 
 // Use temporary path if we're running a test.
 // TODO: Refactor away 'OASIS_TEST' variable.
@@ -126,7 +126,7 @@ const ensureConnection = (customConfig) => {
           log("Starting Scuttlebutt service");
 
           // Adjust with `customConfig`, which declares further preferences.
-          serverHandle = flotilla(customConfig);
+          serverHandle = packages(customConfig);
 
           // Give the server a moment to start. This is a race condition. :/
           setTimeout(() => {
